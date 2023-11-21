@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		45C732422B0D0F1700D69847 /* GPTPlusPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C732412B0D0F1700D69847 /* GPTPlusPlusApp.swift */; };
+		45C732442B0D0F1700D69847 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C732432B0D0F1700D69847 /* ContentView.swift */; };
+		45C732462B0D0F1C00D69847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C732452B0D0F1C00D69847 /* Assets.xcassets */; };
+		45C732492B0D0F1C00D69847 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C732482B0D0F1C00D69847 /* Preview Assets.xcassets */; };
+		45C7324B2B0D0F1C00D69847 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7324A2B0D0F1C00D69847 /* Persistence.swift */; };
+		45C7324E2B0D0F1C00D69847 /* GPTPlusPlus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45C7324C2B0D0F1C00D69847 /* GPTPlusPlus.xcdatamodeld */; };
+		45C732582B0D0F1D00D69847 /* GPTPlusPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C732572B0D0F1D00D69847 /* GPTPlusPlusTests.swift */; };
+		45C732622B0D0F1D00D69847 /* GPTPlusPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C732612B0D0F1D00D69847 /* GPTPlusPlusUITests.swift */; };
+		45C732642B0D0F1D00D69847 /* GPTPlusPlusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C732632B0D0F1D00D69847 /* GPTPlusPlusUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45C732542B0D0F1D00D69847 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45C732362B0D0F1700D69847 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45C7323D2B0D0F1700D69847;
+			remoteInfo = GPTPlusPlus;
+		};
+		45C7325E2B0D0F1D00D69847 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45C732362B0D0F1700D69847 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45C7323D2B0D0F1700D69847;
+			remoteInfo = GPTPlusPlus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		45C7323E2B0D0F1700D69847 /* GPTPlusPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPTPlusPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45C732412B0D0F1700D69847 /* GPTPlusPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTPlusPlusApp.swift; sourceTree = "<group>"; };
+		45C732432B0D0F1700D69847 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		45C732452B0D0F1C00D69847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45C732482B0D0F1C00D69847 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		45C7324A2B0D0F1C00D69847 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		45C7324D2B0D0F1C00D69847 /* GPTPlusPlus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GPTPlusPlus.xcdatamodel; sourceTree = "<group>"; };
+		45C732532B0D0F1D00D69847 /* GPTPlusPlusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPTPlusPlusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45C732572B0D0F1D00D69847 /* GPTPlusPlusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTPlusPlusTests.swift; sourceTree = "<group>"; };
+		45C7325D2B0D0F1D00D69847 /* GPTPlusPlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPTPlusPlusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45C732612B0D0F1D00D69847 /* GPTPlusPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTPlusPlusUITests.swift; sourceTree = "<group>"; };
+		45C732632B0D0F1D00D69847 /* GPTPlusPlusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTPlusPlusUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45C7323B2B0D0F1700D69847 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45C732502B0D0F1D00D69847 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45C7325A2B0D0F1D00D69847 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45C732352B0D0F1700D69847 = {
+			isa = PBXGroup;
+			children = (
+				45C732402B0D0F1700D69847 /* GPTPlusPlus */,
+				45C732562B0D0F1D00D69847 /* GPTPlusPlusTests */,
+				45C732602B0D0F1D00D69847 /* GPTPlusPlusUITests */,
+				45C7323F2B0D0F1700D69847 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		45C7323F2B0D0F1700D69847 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45C7323E2B0D0F1700D69847 /* GPTPlusPlus.app */,
+				45C732532B0D0F1D00D69847 /* GPTPlusPlusTests.xctest */,
+				45C7325D2B0D0F1D00D69847 /* GPTPlusPlusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45C732402B0D0F1700D69847 /* GPTPlusPlus */ = {
+			isa = PBXGroup;
+			children = (
+				45C732412B0D0F1700D69847 /* GPTPlusPlusApp.swift */,
+				45C732432B0D0F1700D69847 /* ContentView.swift */,
+				45C732452B0D0F1C00D69847 /* Assets.xcassets */,
+				45C7324A2B0D0F1C00D69847 /* Persistence.swift */,
+				45C7324C2B0D0F1C00D69847 /* GPTPlusPlus.xcdatamodeld */,
+				45C732472B0D0F1C00D69847 /* Preview Content */,
+			);
+			path = GPTPlusPlus;
+			sourceTree = "<group>";
+		};
+		45C732472B0D0F1C00D69847 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				45C732482B0D0F1C00D69847 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		45C732562B0D0F1D00D69847 /* GPTPlusPlusTests */ = {
+			isa = PBXGroup;
+			children = (
+				45C732572B0D0F1D00D69847 /* GPTPlusPlusTests.swift */,
+			);
+			path = GPTPlusPlusTests;
+			sourceTree = "<group>";
+		};
+		45C732602B0D0F1D00D69847 /* GPTPlusPlusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				45C732612B0D0F1D00D69847 /* GPTPlusPlusUITests.swift */,
+				45C732632B0D0F1D00D69847 /* GPTPlusPlusUITestsLaunchTests.swift */,
+			);
+			path = GPTPlusPlusUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		45C7323D2B0D0F1700D69847 /* GPTPlusPlus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45C732672B0D0F1D00D69847 /* Build configuration list for PBXNativeTarget "GPTPlusPlus" */;
+			buildPhases = (
+				45C7323A2B0D0F1700D69847 /* Sources */,
+				45C7323B2B0D0F1700D69847 /* Frameworks */,
+				45C7323C2B0D0F1700D69847 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GPTPlusPlus;
+			productName = GPTPlusPlus;
+			productReference = 45C7323E2B0D0F1700D69847 /* GPTPlusPlus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		45C732522B0D0F1D00D69847 /* GPTPlusPlusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45C7326A2B0D0F1D00D69847 /* Build configuration list for PBXNativeTarget "GPTPlusPlusTests" */;
+			buildPhases = (
+				45C7324F2B0D0F1D00D69847 /* Sources */,
+				45C732502B0D0F1D00D69847 /* Frameworks */,
+				45C732512B0D0F1D00D69847 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45C732552B0D0F1D00D69847 /* PBXTargetDependency */,
+			);
+			name = GPTPlusPlusTests;
+			productName = GPTPlusPlusTests;
+			productReference = 45C732532B0D0F1D00D69847 /* GPTPlusPlusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		45C7325C2B0D0F1D00D69847 /* GPTPlusPlusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45C7326D2B0D0F1D00D69847 /* Build configuration list for PBXNativeTarget "GPTPlusPlusUITests" */;
+			buildPhases = (
+				45C732592B0D0F1D00D69847 /* Sources */,
+				45C7325A2B0D0F1D00D69847 /* Frameworks */,
+				45C7325B2B0D0F1D00D69847 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45C7325F2B0D0F1D00D69847 /* PBXTargetDependency */,
+			);
+			name = GPTPlusPlusUITests;
+			productName = GPTPlusPlusUITests;
+			productReference = 45C7325D2B0D0F1D00D69847 /* GPTPlusPlusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		45C732362B0D0F1700D69847 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					45C7323D2B0D0F1700D69847 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					45C732522B0D0F1D00D69847 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 45C7323D2B0D0F1700D69847;
+					};
+					45C7325C2B0D0F1D00D69847 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 45C7323D2B0D0F1700D69847;
+					};
+				};
+			};
+			buildConfigurationList = 45C732392B0D0F1700D69847 /* Build configuration list for PBXProject "GPTPlusPlus" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 45C732352B0D0F1700D69847;
+			productRefGroup = 45C7323F2B0D0F1700D69847 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45C7323D2B0D0F1700D69847 /* GPTPlusPlus */,
+				45C732522B0D0F1D00D69847 /* GPTPlusPlusTests */,
+				45C7325C2B0D0F1D00D69847 /* GPTPlusPlusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		45C7323C2B0D0F1700D69847 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45C732492B0D0F1C00D69847 /* Preview Assets.xcassets in Resources */,
+				45C732462B0D0F1C00D69847 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45C732512B0D0F1D00D69847 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45C7325B2B0D0F1D00D69847 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45C7323A2B0D0F1700D69847 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45C7324B2B0D0F1C00D69847 /* Persistence.swift in Sources */,
+				45C732442B0D0F1700D69847 /* ContentView.swift in Sources */,
+				45C732422B0D0F1700D69847 /* GPTPlusPlusApp.swift in Sources */,
+				45C7324E2B0D0F1C00D69847 /* GPTPlusPlus.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45C7324F2B0D0F1D00D69847 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45C732582B0D0F1D00D69847 /* GPTPlusPlusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45C732592B0D0F1D00D69847 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45C732642B0D0F1D00D69847 /* GPTPlusPlusUITestsLaunchTests.swift in Sources */,
+				45C732622B0D0F1D00D69847 /* GPTPlusPlusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		45C732552B0D0F1D00D69847 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45C7323D2B0D0F1700D69847 /* GPTPlusPlus */;
+			targetProxy = 45C732542B0D0F1D00D69847 /* PBXContainerItemProxy */;
+		};
+		45C7325F2B0D0F1D00D69847 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45C7323D2B0D0F1700D69847 /* GPTPlusPlus */;
+			targetProxy = 45C7325E2B0D0F1D00D69847 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		45C732652B0D0F1D00D69847 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		45C732662B0D0F1D00D69847 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		45C732682B0D0F1D00D69847 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GPTPlusPlus/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gptplusplus.GPTPlusPlus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		45C732692B0D0F1D00D69847 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GPTPlusPlus/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gptplusplus.GPTPlusPlus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		45C7326B2B0D0F1D00D69847 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gptplusplus.GPTPlusPlusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GPTPlusPlus.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GPTPlusPlus";
+			};
+			name = Debug;
+		};
+		45C7326C2B0D0F1D00D69847 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gptplusplus.GPTPlusPlusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GPTPlusPlus.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GPTPlusPlus";
+			};
+			name = Release;
+		};
+		45C7326E2B0D0F1D00D69847 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gptplusplus.GPTPlusPlusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GPTPlusPlus;
+			};
+			name = Debug;
+		};
+		45C7326F2B0D0F1D00D69847 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gptplusplus.GPTPlusPlusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GPTPlusPlus;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		45C732392B0D0F1700D69847 /* Build configuration list for PBXProject "GPTPlusPlus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45C732652B0D0F1D00D69847 /* Debug */,
+				45C732662B0D0F1D00D69847 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45C732672B0D0F1D00D69847 /* Build configuration list for PBXNativeTarget "GPTPlusPlus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45C732682B0D0F1D00D69847 /* Debug */,
+				45C732692B0D0F1D00D69847 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45C7326A2B0D0F1D00D69847 /* Build configuration list for PBXNativeTarget "GPTPlusPlusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45C7326B2B0D0F1D00D69847 /* Debug */,
+				45C7326C2B0D0F1D00D69847 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45C7326D2B0D0F1D00D69847 /* Build configuration list for PBXNativeTarget "GPTPlusPlusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45C7326E2B0D0F1D00D69847 /* Debug */,
+				45C7326F2B0D0F1D00D69847 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		45C7324C2B0D0F1C00D69847 /* GPTPlusPlus.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				45C7324D2B0D0F1C00D69847 /* GPTPlusPlus.xcdatamodel */,
+			);
+			currentVersion = 45C7324D2B0D0F1C00D69847 /* GPTPlusPlus.xcdatamodel */;
+			path = GPTPlusPlus.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 45C732362B0D0F1700D69847 /* Project object */;
+}
