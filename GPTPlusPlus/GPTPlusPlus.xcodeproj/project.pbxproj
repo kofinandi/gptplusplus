@@ -98,8 +98,11 @@
 		45C732402B0D0F1700D69847 /* GPTPlusPlus */ = {
 			isa = PBXGroup;
 			children = (
+				45C732732B0D2B6800D69847 /* Services */,
+				45C732722B0D2B5D00D69847 /* Model */,
+				45C732712B0D2B5400D69847 /* ViewModel */,
+				45C732702B0D2B4C00D69847 /* View */,
 				45C732412B0D0F1700D69847 /* GPTPlusPlusApp.swift */,
-				45C732432B0D0F1700D69847 /* ContentView.swift */,
 				45C732452B0D0F1C00D69847 /* Assets.xcassets */,
 				45C7324A2B0D0F1C00D69847 /* Persistence.swift */,
 				45C7324C2B0D0F1C00D69847 /* GPTPlusPlus.xcdatamodeld */,
@@ -131,6 +134,35 @@
 				45C732632B0D0F1D00D69847 /* GPTPlusPlusUITestsLaunchTests.swift */,
 			);
 			path = GPTPlusPlusUITests;
+			sourceTree = "<group>";
+		};
+		45C732702B0D2B4C00D69847 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				45C732432B0D0F1700D69847 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		45C732712B0D2B5400D69847 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		45C732722B0D2B5D00D69847 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		45C732732B0D2B6800D69847 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
