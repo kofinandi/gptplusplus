@@ -25,9 +25,7 @@ struct FoldersView: View {
                 }) {
                     Image(systemName: "plus")
                 }
-                Button(action: {
-                    print("Add new folder")
-                }) {
+                NavigationLink(destination: SettingsView()) {
                     Image(systemName: "gearshape")
                 }
             }
