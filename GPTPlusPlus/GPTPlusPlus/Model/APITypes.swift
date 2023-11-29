@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum APITypes {
+enum APITypes: String, CaseIterable {
     case jo
     case jobb
 }

@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct Folder: Identifiable {
+class Folder: Identifiable {
     let id: UUID
     var name: String
+    
+    init(name: String) {
+        self.id = UUID()
+        self.name = name
+    }
 }

@@ -7,8 +7,14 @@
 
 import Foundation
 
-struct Chat: Identifiable {
+class Chat: Identifiable {
     let id: UUID
     var title: String
     var text: String
+    
+    init(id: UUID, title: String, text: String) {
+        self.id = id
+        self.title = title
+        self.text = text
+    }
 }
