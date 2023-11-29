@@ -33,6 +33,9 @@ struct SettingsView: View {
                     }
                 }
                 .pickerStyle(SegmentedPickerStyle())
+                .onChange(of: settings.selectedTheme) { value in
+                    settings.saveTheme()
+                }
             }
             
             Section(header: Text("Prompt Library")) {

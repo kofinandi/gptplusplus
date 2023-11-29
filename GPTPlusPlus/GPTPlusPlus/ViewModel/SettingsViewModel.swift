@@ -9,13 +9,15 @@ class SettingsViewModel: ObservableObject {
     @Published var prompts: [Prompt]
     
     init() {
-        self.apiKeys = []
-        self.selectedTheme = Theme(rawValue: UserDefaults.standard.string(forKey: "selectedTheme") ?? "") ?? .system
-        self.prompts = []
+        self.apiKeys = SettingsStorage.instance.apiKeys
+        self.selectedTheme = SettingsStorage.instance.selectedTheme
+        self.prompts = SettingsStorage.instance.prompts
+        self.selectedAPIKey = SettingsStorage.instance.activeKey
     }
 
     func setActiveAPIKey(apiKey: APIKey) {
         selectedAPIKey = apiKey
+        SettingsStorage.instance.activeKey = apiKey
     }
 
     // Add or remove API keys
@@ -36,11 +38,13 @@ class SettingsViewModel: ObservableObject {
         }
         apiKeyError = nil
         apiKeys.append(apiKey)
+        SettingsStorage.instance.apiKeys = apiKeys
     }
 
     func removeAPIKey(at offsets: IndexSet) {
         let removed = apiKeys[offsets.first!]
         apiKeys.remove(atOffsets: offsets)
+        SettingsStorage.instance.apiKeys = apiKeys
         if selectedAPIKey?.id == removed.id {
             selectedAPIKey = nil
         }
@@ -53,15 +57,22 @@ class SettingsViewModel: ObservableObject {
     // Add or remove prompts
     func addPrompt(prompt: Prompt) {
         prompts.append(prompt)
+        SettingsStorage.instance.prompts = prompts
     }
 
     func editPrompt(prompt: Prompt, id: UUID) {
         if let index = prompts.firstIndex(where: { $0.id == id }) {
             prompts[index] = prompt
+            SettingsStorage.instance.prompts = prompts
         }
     }
 
     func removePrompt(at offsets: IndexSet) {
         prompts.remove(atOffsets: offsets)
+        SettingsStorage.instance.prompts = prompts
+    }
+
+    func saveTheme() {
+        SettingsStorage.instance.selectedTheme = selectedTheme
     }
 }

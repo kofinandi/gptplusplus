@@ -23,11 +23,7 @@ struct AddApiKeyView: View {
         Form {
             Section(header: Text("Add a new API key")) {
                 TextField("Title", text: $title)
-                TextEditor(text: $key)
-                .placeholder(when: key.isEmpty) {
-                    Text("Key")
-                        .foregroundColor(Color(UIColor.placeholderText))
-                }
+                TextField("Key", text: $key)
                 if let apiKeyError = settings.apiKeyError {
                     Text(apiKeyError)
                         .foregroundColor(.red)
@@ -47,16 +43,6 @@ struct AddApiKeyView: View {
         .navigationTitle("Add Prompt")
         .onAppear{
             settings.dismissAPIError()
-        }
-    }
-}
-
-extension View {
-    @ViewBuilder
-    func placeholder<Content: View>(when shouldShow: Bool, alignment: Alignment = .leading, @ViewBuilder content: () -> Content) -> some View {
-        ZStack(alignment: alignment) {
-            content().opacity(shouldShow ? 1 : 0)
-            self
         }
     }
 }
