@@ -8,9 +8,14 @@
 import Foundation
 
 class ChatViewModel: ObservableObject {
-    var chatDetails: ChatDetails
+    @Published var chatDetails: ChatDetails
     
     init(chatDetails: ChatDetails) {
         self.chatDetails = chatDetails
+    }
+    
+    func updateChatDetails(with: ChatDetails) {
+        globalStorage.updateChatDetails(with: with)
+        self.chatDetails = with
     }
 }
