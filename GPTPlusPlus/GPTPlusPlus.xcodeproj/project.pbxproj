@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F5B72DD2B1764F100AEF064 /* SettingsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B72DC2B1764F100AEF064 /* SettingsStorage.swift */; };
 		3F8DC9CC2B174DB9002283CB /* ApiKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8DC9CB2B174DB9002283CB /* ApiKeyView.swift */; };
 		450609DB2B173F2B00F2FFB3 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450609DA2B173F2B00F2FFB3 /* Chat.swift */; };
 		450609DD2B17456200F2FFB3 /* GlobalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450609DC2B17456200F2FFB3 /* GlobalStorage.swift */; };
 		450609DF2B1757DD00F2FFB3 /* FolderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450609DE2B1757DD00F2FFB3 /* FolderRowView.swift */; };
 		45C732422B0D0F1700D69847 /* GPTPlusPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C732412B0D0F1700D69847 /* GPTPlusPlusApp.swift */; };
-		45C732442B0D0F1700D69847 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C732432B0D0F1700D69847 /* ContentView.swift */; };
 		45C732462B0D0F1C00D69847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C732452B0D0F1C00D69847 /* Assets.xcassets */; };
 		45C732492B0D0F1C00D69847 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C732482B0D0F1C00D69847 /* Preview Assets.xcassets */; };
 		45C7324B2B0D0F1C00D69847 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7324A2B0D0F1C00D69847 /* Persistence.swift */; };
@@ -20,10 +20,6 @@
 		45C732582B0D0F1D00D69847 /* GPTPlusPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C732572B0D0F1D00D69847 /* GPTPlusPlusTests.swift */; };
 		45C732622B0D0F1D00D69847 /* GPTPlusPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C732612B0D0F1D00D69847 /* GPTPlusPlusUITests.swift */; };
 		45C732642B0D0F1D00D69847 /* GPTPlusPlusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C732632B0D0F1D00D69847 /* GPTPlusPlusUITestsLaunchTests.swift */; };
-		C714DF7C2B0D2E4600FC3373 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714DF7B2B0D2E4600FC3373 /* SettingsView.swift */; };
-		C714DF7E2B0D2EDC00FC3373 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714DF7D2B0D2EDC00FC3373 /* SettingsModel.swift */; };
-		C714DF802B0D2EEA00FC3373 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714DF7F2B0D2EEA00FC3373 /* SettingsViewModel.swift */; };
-		C714DF822B0D309500FC3373 /* PromptEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714DF812B0D309500FC3373 /* PromptEditView.swift */; };
 		45C732752B0D2D7F00D69847 /* FoldersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C732742B0D2D7F00D69847 /* FoldersView.swift */; };
 		45C732772B0D2E0A00D69847 /* ChatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C732762B0D2E0A00D69847 /* ChatsView.swift */; };
 		45C732792B0D2E6600D69847 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C732782B0D2E6600D69847 /* ChatView.swift */; };
@@ -34,6 +30,10 @@
 		45C732852B0D2FD800D69847 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C732842B0D2FD800D69847 /* Folder.swift */; };
 		45C732892B0D300300D69847 /* ChatDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C732882B0D300300D69847 /* ChatDetails.swift */; };
 		45C7328B2B0D350400D69847 /* APITypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7328A2B0D350400D69847 /* APITypes.swift */; };
+		C714DF7C2B0D2E4600FC3373 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714DF7B2B0D2E4600FC3373 /* SettingsView.swift */; };
+		C714DF7E2B0D2EDC00FC3373 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714DF7D2B0D2EDC00FC3373 /* SettingsModel.swift */; };
+		C714DF802B0D2EEA00FC3373 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714DF7F2B0D2EEA00FC3373 /* SettingsViewModel.swift */; };
+		C714DF822B0D309500FC3373 /* PromptEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714DF812B0D309500FC3373 /* PromptEditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,13 +54,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F5B72DC2B1764F100AEF064 /* SettingsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStorage.swift; sourceTree = "<group>"; };
 		3F8DC9CB2B174DB9002283CB /* ApiKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeyView.swift; sourceTree = "<group>"; };
 		450609DA2B173F2B00F2FFB3 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		450609DC2B17456200F2FFB3 /* GlobalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalStorage.swift; sourceTree = "<group>"; };
 		450609DE2B1757DD00F2FFB3 /* FolderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderRowView.swift; sourceTree = "<group>"; };
 		45C7323E2B0D0F1700D69847 /* GPTPlusPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPTPlusPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C732412B0D0F1700D69847 /* GPTPlusPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTPlusPlusApp.swift; sourceTree = "<group>"; };
-		45C732432B0D0F1700D69847 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		45C732452B0D0F1C00D69847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45C732482B0D0F1C00D69847 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		45C7324A2B0D0F1C00D69847 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -70,10 +70,6 @@
 		45C7325D2B0D0F1D00D69847 /* GPTPlusPlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPTPlusPlusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C732612B0D0F1D00D69847 /* GPTPlusPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTPlusPlusUITests.swift; sourceTree = "<group>"; };
 		45C732632B0D0F1D00D69847 /* GPTPlusPlusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTPlusPlusUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C714DF7B2B0D2E4600FC3373 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		C714DF7D2B0D2EDC00FC3373 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
-		C714DF7F2B0D2EEA00FC3373 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		C714DF812B0D309500FC3373 /* PromptEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptEditView.swift; sourceTree = "<group>"; };
 		45C732742B0D2D7F00D69847 /* FoldersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersView.swift; sourceTree = "<group>"; };
 		45C732762B0D2E0A00D69847 /* ChatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsView.swift; sourceTree = "<group>"; };
 		45C732782B0D2E6600D69847 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -84,6 +80,10 @@
 		45C732842B0D2FD800D69847 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
 		45C732882B0D300300D69847 /* ChatDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetails.swift; sourceTree = "<group>"; };
 		45C7328A2B0D350400D69847 /* APITypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITypes.swift; sourceTree = "<group>"; };
+		C714DF7B2B0D2E4600FC3373 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C714DF7D2B0D2EDC00FC3373 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		C714DF7F2B0D2EEA00FC3373 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		C714DF812B0D309500FC3373 /* PromptEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptEditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				C714DF812B0D309500FC3373 /* PromptEditView.swift */,
-				45C732432B0D0F1700D69847 /* ContentView.swift */,
 				C714DF7B2B0D2E4600FC3373 /* SettingsView.swift */,
 				3F8DC9CB2B174DB9002283CB /* ApiKeyView.swift */,
 				45C732742B0D2D7F00D69847 /* FoldersView.swift */,
@@ -208,6 +207,7 @@
 				45C7328A2B0D350400D69847 /* APITypes.swift */,
 				450609DA2B173F2B00F2FFB3 /* Chat.swift */,
 				450609DC2B17456200F2FFB3 /* GlobalStorage.swift */,
+				3F5B72DC2B1764F100AEF064 /* SettingsStorage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -355,7 +355,7 @@
 				450609DF2B1757DD00F2FFB3 /* FolderRowView.swift in Sources */,
 				45C7327F2B0D2F6100D69847 /* ChatsViewModel.swift in Sources */,
 				45C7324B2B0D0F1C00D69847 /* Persistence.swift in Sources */,
-				45C732442B0D0F1700D69847 /* ContentView.swift in Sources */,
+				3F5B72DD2B1764F100AEF064 /* SettingsStorage.swift in Sources */,
 				45C732792B0D2E6600D69847 /* ChatView.swift in Sources */,
 				450609DD2B17456200F2FFB3 /* GlobalStorage.swift in Sources */,
 				45C732422B0D0F1700D69847 /* GPTPlusPlusApp.swift in Sources */,
