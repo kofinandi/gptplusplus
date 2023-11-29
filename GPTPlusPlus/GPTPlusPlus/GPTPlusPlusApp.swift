@@ -9,12 +9,11 @@ import SwiftUI
 
 @main
 struct GPTPlusPlusApp: App {
-    let persistenceController = PersistenceController.shared
+    let storage: GlobalStorage = GlobalStorage()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            FoldersView()
         }
     }
 }
