@@ -2,31 +2,36 @@ import Foundation
 import SwiftUI
 
 class SettingsViewModel: ObservableObject {
-    @Published var apiKeys: [String]
-    @Published var selectedAPIKey: String?
+    @Published var apiKeys: [APIKey]
+    @Published var selectedAPIKey: APIKey?
     @Published var apiKeyError: String? = nil
     @Published var selectedTheme: Theme
     @Published var prompts: [Prompt]
     
     init() {
-        // Initialize with some default values or load from UserDefaults
-        self.apiKeys = UserDefaults.standard.stringArray(forKey: "apiKeys") ?? []
+        self.apiKeys = []
         self.selectedTheme = Theme(rawValue: UserDefaults.standard.string(forKey: "selectedTheme") ?? "") ?? .system
         self.prompts = []
     }
 
-    func setActiveAPIKey(apiKey: String) {
+    func setActiveAPIKey(apiKey: APIKey) {
         selectedAPIKey = apiKey
     }
 
     // Add or remove API keys
-    func addAPIKey(apiKey: String) {
-        if apiKey.isEmpty {
+    func addAPIKey(apiKey: APIKey) {
+        if apiKey.title.isEmpty {
+            apiKeyError = "Title cannot be empty"
+            return
+        }
+        if apiKey.key.isEmpty {
             apiKeyError = "API key cannot be empty"
             return
         }
-        if apiKeys.contains(apiKey) {
-            apiKeyError = "API key already exists"
+        if apiKeys.contains(where: { key in
+            return key.title == apiKey.title
+        }){
+            apiKeyError = "API key with the same title already exists"
             return
         }
         apiKeyError = nil
@@ -36,9 +41,13 @@ class SettingsViewModel: ObservableObject {
     func removeAPIKey(at offsets: IndexSet) {
         let removed = apiKeys[offsets.first!]
         apiKeys.remove(atOffsets: offsets)
-        if selectedAPIKey == removed {
+        if selectedAPIKey?.id == removed.id {
             selectedAPIKey = nil
         }
+    }
+    
+    func dismissAPIError(){
+        apiKeyError = nil
     }
 
     // Add or remove prompts
