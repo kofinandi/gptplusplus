@@ -18,3 +18,5 @@ class Chat: Identifiable {
         self.text = text
     }
 }
+
+

@@ -7,7 +7,11 @@
 
 import Foundation
 
-class ChatDetails: Identifiable, ObservableObject, NSCopying {
+class ChatDetails: Identifiable, ObservableObject, NSCopying, Hashable {
+    static func == (lhs: ChatDetails, rhs: ChatDetails) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
     @Published var id: UUID
     @Published var title: String
     @Published var api: APITypes
@@ -53,5 +57,10 @@ class ChatDetails: Identifiable, ObservableObject, NSCopying {
         self.api = .jo
         self.autoGenerateTitle = false
         self.showMarkdown = false
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        // Combine the hash value of the UUID property
+        hasher.combine(id)
     }
 }
