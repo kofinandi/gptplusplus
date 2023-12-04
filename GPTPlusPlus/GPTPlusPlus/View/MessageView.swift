@@ -17,7 +17,7 @@ struct MessageView: View {
     }
     
     var body: some View {
-        HStack {
+        HStack(alignment: .bottom) {
             if viewModel.message.sender == .user {
                 Spacer()
             } else {

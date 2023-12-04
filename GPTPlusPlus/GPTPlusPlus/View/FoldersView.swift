@@ -42,18 +42,6 @@ struct FoldersView: View {
                         }
                 }
             }
-            .alert("Enter new name for folder", isPresented: $isRenameAlertPresented) {
-                TextField("New name", text: $newName)
-                Button("OK", action: {folderViewModel.renameFolder(withID: editingID!, to: newName)})
-                Button("Cancel", role: .cancel) { }
-            }
-            .alert(isPresented: $folderViewModel.incorrectName) {
-                Alert(
-                    title: Text("Incorrect name"),
-                    message: Text("Name cannot be empty!"),
-                    dismissButton: .default(Text("OK"))
-                )
-            }
             .alert(isPresented: $folderViewModel.folderNotEmptyWarning) {
                 Alert(
                     title: Text("Folder is not empty"),

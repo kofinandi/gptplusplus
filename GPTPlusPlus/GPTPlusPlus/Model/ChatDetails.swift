@@ -17,8 +17,13 @@ class ChatDetails: Identifiable, ObservableObject, NSCopying, Hashable {
     @Published var title: String
     @Published var api: APITypes
     @Published var autoGenerateTitle: Bool
+    @Published var temperature: Double
     @Published var showMarkdown: Bool
     @Published var folderID: UUID
+    @Published var titleGenPrompt: Prompt?
+    @Published var systemGreetingPrompt: Prompt?
+
+    static let defaultTitleGenPrompt = "Generate a short title (without quotation marks) for the following conversation: "
     
     init(folderID: UUID) {
         self.id = UUID()
@@ -26,20 +31,22 @@ class ChatDetails: Identifiable, ObservableObject, NSCopying, Hashable {
         self.api = .jo
         self.autoGenerateTitle = false
         self.showMarkdown = false
+        self.temperature = 0.0
         self.folderID = folderID
     }
     
-    init(id: UUID, title: String, api: APITypes, autoGenerateTitle: Bool, showMarkdown: Bool, folderID: UUID) {
+    init(id: UUID, title: String, api: APITypes, autoGenerateTitle: Bool, showMarkdown: Bool, folderID: UUID, temperature: Double = 0.0) {
         self.id = id
         self.title = title
         self.api = api
         self.autoGenerateTitle = autoGenerateTitle
         self.showMarkdown = showMarkdown
+        self.temperature = temperature
         self.folderID = folderID
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        let copy = ChatDetails(id: self.id, title: self.title, api: self.api, autoGenerateTitle: self.autoGenerateTitle, showMarkdown: self.showMarkdown, folderID: self.folderID)
+        let copy = ChatDetails(id: self.id, title: self.title, api: self.api, autoGenerateTitle: self.autoGenerateTitle, showMarkdown: self.showMarkdown, folderID: self.folderID, temperature: self.temperature)
         return copy
     }
     
