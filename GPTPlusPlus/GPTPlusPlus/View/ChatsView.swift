@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChatsView: View {
-    let folder: Folder
+    let folder: FolderPersisted
     @StateObject var chatsViewModel: ChatsViewModel
     @State var addNewChatPresented = false
     @State var modifyChatPresented = false
@@ -18,11 +18,11 @@ struct ChatsView: View {
     @State var lastAdded = false
     @State var lastAddedIndex = 0
     
-    init(folder: Folder) {
+    init(folder: FolderPersisted) {
         self.folder = folder
         self._chatsViewModel = StateObject(wrappedValue: ChatsViewModel(folder: folder))
-        self._newChat = StateObject(wrappedValue: ChatDetails(folderID: folder.id))
-        self._modifyChat = StateObject(wrappedValue: ChatDetails(folderID: folder.id))
+        self._newChat = StateObject(wrappedValue: ChatDetails(folderID: folder.id!))
+        self._modifyChat = StateObject(wrappedValue: ChatDetails(folderID: folder.id!))
     }
     
     var body: some View {
@@ -51,7 +51,7 @@ struct ChatsView: View {
                 }
             }
         }
-        .navigationTitle(self.folder.name)
+        .navigationTitle(self.folder.name!)
         .navigationBarItems(trailing:
                                 Button(action: {
             self.addNewChatPresented = true
@@ -102,11 +102,15 @@ struct ChatsView: View {
             .padding(EdgeInsets(top: 32, leading: 32, bottom: 32, trailing: 32))
         }
         .background(
-            NavigationLink(destination: ChatView(chatDetails:  chatsViewModel.chats[lastAddedIndex]), isActive: $lastAdded) {
-                EmptyView()
+            AnyView {
+                if !chatsViewModel.chats.isEmpty {
+                    NavigationLink(destination: ChatView(chatDetails:  chatsViewModel.chats[lastAddedIndex]), isActive: $lastAdded) {
+                        EmptyView()
+                    }
+                    .opacity(0) // Hide the link view
+                    .disabled(true)
+                }
             }
-                .opacity(0) // Hide the link view
-                .disabled(true)
         )
     }
 }

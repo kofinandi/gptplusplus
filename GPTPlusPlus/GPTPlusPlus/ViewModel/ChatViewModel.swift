@@ -13,11 +13,11 @@ class ChatViewModel: ObservableObject {
     
     init(chatDetails: ChatDetails) {
         self.chatDetails = chatDetails
-        messageViewModels = globalStorage.messages[chatDetails]?.map { MessageViewModel(message: $0, chatViewModel: self) } ?? []
+        messageViewModels = globalStorage.getChatMessages(byChatDetails: chatDetails).map { MessageViewModel(message: $0, chatViewModel: self) }
     }
     
     func sendMessage(text: String, sender: Message.Sender = .user) {
-        let message = Message(sender: sender, text: text)
+        let message = Message(sender: sender, text: text, chatDetailsID: chatDetails.id, idx: messageViewModels.count)
         messageViewModels.append(MessageViewModel(message: message, chatViewModel: self))
         globalStorage.addChatMessage(byChatDetails: chatDetails, message: message)
     }

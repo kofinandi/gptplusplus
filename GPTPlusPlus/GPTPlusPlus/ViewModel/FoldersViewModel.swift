@@ -8,7 +8,8 @@
 import Foundation
 
 class FoldersViewModel: ObservableObject {
-    @Published var folders: [Folder]
+    private var viewContext = PersistenceController.shared.container.viewContext
+    @Published var folders: [FolderPersisted]
     @Published var incorrectName = false
     @Published var folderNotEmptyWarning = false
     
@@ -17,7 +18,9 @@ class FoldersViewModel: ObservableObject {
     }
     
     func addNewFolder() {
-        let newFolder = Folder(name: "New Folder")
+        let newFolder = FolderPersisted(context: viewContext)
+        newFolder.id = UUID()
+        newFolder.name = "New folder"
         globalStorage.addNewFolder(folder: newFolder)
         folders = globalStorage.getAllFolders()
     }

@@ -18,11 +18,11 @@ struct FoldersView: View {
         NavigationView {
             List(folderViewModel.folders, id: \.id) { folder in
                 NavigationLink(destination: ChatsView(folder: folder)) {
-                    FolderRowView(title: folder.name)
+                    FolderRowView(title: folder.name ?? "")
                         .contextMenu {
                             Group {
                                 Button(action: {
-                                    self.newName = folder.name
+                                    self.newName = folder.name!
                                     self.editingID = folder.id
                                     self.isRenameAlertPresented = true
                                 }) {
@@ -32,7 +32,7 @@ struct FoldersView: View {
                                 Button(action: {
                                     self.editingID = folder.id
                                     withAnimation {
-                                        folderViewModel.deleteFolder(withID: folder.id)
+                                        folderViewModel.deleteFolder(withID: folder.id!)
                                     }
                                 }) {
                                     Text("Delete")

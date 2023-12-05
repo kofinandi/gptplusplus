@@ -56,7 +56,7 @@ class MessageViewModel: ObservableObject, Identifiable {
     }
     
     func insertMessage(sender: Message.Sender, text: String) {
-        let message = Message(sender: sender, text: text)
+        let message = Message(sender: sender, text: text, chatDetailsID: chatViewModel.chatDetails.id, idx: self.message.idx)
         chatViewModel.insertMessage(message: message, bellow: self.message)
     }
 }

@@ -38,6 +38,8 @@ struct ChatPopupView: View {
                     Spacer()
                 }
                 Divider()
+            }
+            Group {
                 HStack {
                     Text("Chat API").font(.title3)
                     Spacer()
@@ -66,6 +68,6 @@ struct ChatPopupView: View {
 
 struct ChatPopupView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatPopupView(title: "Configure chat", chatDetails: globalStorage.getChatDetails(byFolderID: globalStorage.getAllFolders()[0].id)[0], showExport: true)
+        ChatPopupView(title: "Configure chat", chatDetails: globalStorage.getChatDetails(byFolderID: globalStorage.getAllFolders()[0].id!)[0], showExport: true)
     }
 }

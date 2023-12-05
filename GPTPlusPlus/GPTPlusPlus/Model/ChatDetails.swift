@@ -8,6 +8,7 @@
 import Foundation
 
 class ChatDetails: Identifiable, ObservableObject, NSCopying, Hashable {
+    private var viewContext = PersistenceController.shared.container.viewContext
     static func == (lhs: ChatDetails, rhs: ChatDetails) -> Bool {
         return lhs.id == rhs.id
     }
@@ -62,5 +63,21 @@ class ChatDetails: Identifiable, ObservableObject, NSCopying, Hashable {
     func hash(into hasher: inout Hasher) {
         // Combine the hash value of the UUID property
         hasher.combine(id)
+    }
+    
+    static func fromPersisted(_ from: ChatDetailsPersisted) -> ChatDetails {
+        return ChatDetails(id: from.id!, title: from.title!, api: APITypes(rawValue: from.api!)!, autoGenerateTitle: from.autoGenerateTitle, showMarkdown: from.showMarkdown, folderID: from.folderID!)
+    }
+
+    func toPersisted() -> ChatDetailsPersisted {
+        let chatDetails = ChatDetailsPersisted(context: viewContext)
+        chatDetails.id = self.id
+        chatDetails.title = self.title
+        chatDetails.api = self.api.rawValue
+        chatDetails.autoGenerateTitle = self.autoGenerateTitle
+        chatDetails.showMarkdown = self.showMarkdown
+        chatDetails.folderID = self.folderID
+        
+        return chatDetails
     }
 }

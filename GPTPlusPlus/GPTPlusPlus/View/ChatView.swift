@@ -119,6 +119,6 @@ struct ChatView: View {
 
 struct Chat_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView(chatDetails: globalStorage.getChatDetails(byFolderID: globalStorage.getAllFolders()[0].id)[0])
+        ChatView(chatDetails: globalStorage.getChatDetails(byFolderID: globalStorage.getAllFolders()[0].id!)[0])
     }
 }

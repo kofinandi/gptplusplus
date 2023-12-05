@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="21G816" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ChatDetailsPersisted" representedClassName="ChatDetailsPersisted" syncable="YES" codeGenerationType="class">
+        <attribute name="api" optional="YES" attributeType="String"/>
+        <attribute name="autoGenerateTitle" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="folderID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="showMarkdown" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="FolderPersisted" representedClassName="FolderPersisted" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class"/>
+    <entity name="MessagePersisted" representedClassName="MessagePersisted" syncable="YES" codeGenerationType="class">
+        <attribute name="chatDetailsID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="idx" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="sender" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+    </entity>
+</model>
