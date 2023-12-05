@@ -23,7 +23,7 @@ class ChatViewModel: ObservableObject {
         self.chatGPTAPI = ChatGPTAPI(chatDetails: chatDetails)
         messageViewModels = globalStorage.getChatMessages(byChatDetails: chatDetails).map { MessageViewModel(message: $0, chatViewModel: self) }
         if messageViewModels.isEmpty, let systemGreetingPrompt: Prompt = chatDetails.systemGreetingPrompt {
-            let message = Message(sender: .system, text: systemGreetingPrompt.text)
+            let message = Message(sender: .system, text: systemGreetingPrompt.text, chatDetailsID: chatDetails.id, idx: 0)
             messageViewModels.append(MessageViewModel(message: message, chatViewModel: self))
             globalStorage.addChatMessage(byChatDetails: chatDetails, message: message)
         }
@@ -98,7 +98,7 @@ class ChatViewModel: ObservableObject {
             self.requestInProgress = false
             switch response {
             case .success(let response):
-                let message = Message(sender: .gpt, text: response)
+                let message = Message(sender: .gpt, text: response, chatDetailsID: self.chatDetails.id, idx: self.messageViewModels.count)
                 self.messageViewModels.append(MessageViewModel(message: message, chatViewModel: self))
                 globalStorage.addChatMessage(byChatDetails: self.chatDetails, message: message)
                 self.scrollToBottomAnimated.toggle()
