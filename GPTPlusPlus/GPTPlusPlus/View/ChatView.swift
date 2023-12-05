@@ -27,9 +27,13 @@ struct ChatView: View {
     var body: some View {
         VStack {
             // Message List
-            getChatList()
+            getChatList().padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             // Input Section
-            getInputBar()
+            getInputBar().padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                .background(
+                    RoundedRectangle(cornerRadius: 0)
+                        .stroke(Color(white: 0.9), lineWidth: 9)
+                )
         }
         .alert(isPresented: $chatViewModel.showApiError) {
             Alert(title: Text("GPT API Error"), message: Text(chatViewModel.apiError ?? "Unknown error"), dismissButton: .default(Text("OK")))
@@ -88,9 +92,9 @@ struct ChatView: View {
                 ForEach(chatViewModel.messageViewModels) { message in
                     MessageView(viewModel: message).id(message.id)
                         .padding(.vertical, 5)
+                        .padding(.horizontal, 12)
                 }
             }
-            .padding(.horizontal, 8)
             .onChange(of: chatViewModel.scrollToBottomAnimated) { _ in
                 withAnimation{
                     scrollView.scrollTo(chatViewModel.messageViewModels.last?.id, anchor: .bottom)
@@ -128,6 +132,11 @@ struct ChatView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding(.vertical, 8)
                 .padding(.horizontal, 8)
+                .onSubmit {
+                    if draftText.isEmpty { return }
+                    chatViewModel.sendMessage(text: draftText, sender: selectedSender)
+                    draftText = ""
+                }
 
             Menu {
                 ForEach(chatViewModel.prompts) { prompt in
@@ -171,7 +180,7 @@ struct ChatView: View {
         }
         .padding(.horizontal)
         .frame(maxWidth: .infinity)
-        .background(Color.gray.opacity(0.2).edgesIgnoringSafeArea(.bottom))
+        .background(Color(white: 0.9).edgesIgnoringSafeArea(.bottom))
     }
 
 }

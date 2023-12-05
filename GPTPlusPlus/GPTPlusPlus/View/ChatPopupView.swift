@@ -11,6 +11,7 @@ struct ChatPopupView: View {
     let title: String
     let showExport: Bool
     @StateObject var chatPopupViewModel: ChatPopupViewModel
+    @State private var showShareSheet = false
     
     init(title: String, chatDetails: ChatDetails, showExport: Bool = false) {
         self.title = title
@@ -60,8 +61,12 @@ struct ChatPopupView: View {
             if (showExport) {
                 Button("Export") {
                     chatPopupViewModel.exportChat()
+                    self.showShareSheet = true
                 }
             }
+        }
+        .sheet(isPresented: $showShareSheet) {
+            ShareSheet(fileURL: getFileURL(filename: chatPopupViewModel.filename))
         }
     }
 }

@@ -46,7 +46,7 @@ class GlobalStorage {
     }
     
     func getAllFolders() -> [FolderPersisted] {
-        return foldersList
+        return foldersList.sorted(by: { $0.name! < $1.name! })
     }
     
     func addNewFolder(folder: FolderPersisted) {
@@ -75,6 +75,12 @@ class GlobalStorage {
     func deleteFolder(withID: UUID) {
         let toDelete = foldersList.first { $0.id == withID }
         foldersList.removeAll { $0.id == withID }
+
+        chatDetailsList.forEach { chatDetails in
+            if chatDetails.folderID == withID {
+                deleteChatDetails(withID: chatDetails.id!)
+            }
+        }
         
         viewContext.delete(toDelete!)
         do {
@@ -123,6 +129,8 @@ class GlobalStorage {
         let toDelete = chatDetailsList.first { $0.id == withID }
         chatDetailsList.removeAll { $0.id == withID}
         
+        messages.removeAll { $0.chatDetailsID == withID }
+
         viewContext.delete(toDelete!)
         do {
             try viewContext.save()

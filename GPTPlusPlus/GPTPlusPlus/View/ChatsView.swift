@@ -102,7 +102,7 @@ struct ChatsView: View {
             .padding(EdgeInsets(top: 32, leading: 32, bottom: 32, trailing: 32))
         }
         .background(
-            AnyView {
+            List {
                 if !chatsViewModel.chats.isEmpty {
                     NavigationLink(destination: ChatView(chatDetails:  chatsViewModel.chats[lastAddedIndex]), isActive: $lastAdded) {
                         EmptyView()

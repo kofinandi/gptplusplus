@@ -40,7 +40,7 @@ struct AddApiKeyView: View {
                 }
             }
         }
-        .navigationTitle("Add Prompt")
+        .navigationTitle("Add API key")
         .onAppear{
             settings.dismissAPIError()
         }

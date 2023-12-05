@@ -26,18 +26,6 @@ struct SettingsView: View {
                 }
             }
             
-            Section(header: Text("Theme")) {
-                Picker("Select Theme", selection: $settings.selectedTheme) {
-                    ForEach(Theme.allCases, id: \.self) { theme in
-                        Text(theme.rawValue)
-                    }
-                }
-                .pickerStyle(SegmentedPickerStyle())
-                .onChange(of: settings.selectedTheme) { value in
-                    settings.saveTheme()
-                }
-            }
-            
             Section(header: Text("Prompt Library")) {
                 List {
                     ForEach(settings.prompts) { prompt in

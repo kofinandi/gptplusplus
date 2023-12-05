@@ -19,7 +19,6 @@ struct GPTPlusPlusApp: App {
     var body: some Scene {
         WindowGroup {
             FoldersView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

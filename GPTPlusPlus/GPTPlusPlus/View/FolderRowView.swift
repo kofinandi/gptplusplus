@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FolderRowView: View {
     let title: String
-    
+
     var body: some View {
         HStack {
             Image(systemName: "folder.fill")
@@ -20,6 +20,7 @@ struct FolderRowView: View {
         .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
     }
 }
+
 
 struct FolderRowView_Previews: PreviewProvider {
     static var previews: some View {
