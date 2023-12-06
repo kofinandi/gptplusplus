@@ -10,10 +10,15 @@ import Foundation
 class ChatPopupViewModel: ObservableObject {
     @Published var chatDetails: ChatDetails
     @Published var filename: String = ""
+    @Published var prompts: [Prompt] = []
     
     init(chatDetails: ChatDetails) {
         self.chatDetails = chatDetails
-        
+        prompts = SettingsStorage.instance.prompts
+    }
+
+    func updatePrompts() {
+        prompts = SettingsStorage.instance.prompts
     }
     
     func exportChat() {

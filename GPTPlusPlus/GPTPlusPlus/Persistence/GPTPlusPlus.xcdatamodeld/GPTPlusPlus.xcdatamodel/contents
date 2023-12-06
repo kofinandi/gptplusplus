@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="21G816" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20B29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ChatDetailsPersisted" representedClassName="ChatDetailsPersisted" syncable="YES" codeGenerationType="class">
         <attribute name="api" optional="YES" attributeType="String"/>
         <attribute name="autoGenerateTitle" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="folderID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="greetingPromptId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="maxTokens" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="showMarkdown" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="titleGenPromptId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="topP" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <entity name="FolderPersisted" representedClassName="FolderPersisted" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
@@ -20,4 +24,10 @@
         <attribute name="sender" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
         <attribute name="text" optional="YES" attributeType="String"/>
     </entity>
+    <elements>
+        <element name="ChatDetailsPersisted" positionX="160" positionY="192" width="128" height="179"/>
+        <element name="FolderPersisted" positionX="160" positionY="192" width="128" height="59"/>
+        <element name="Item" positionX="160" positionY="192" width="128" height="29"/>
+        <element name="MessagePersisted" positionX="160" positionY="192" width="128" height="104"/>
+    </elements>
 </model>

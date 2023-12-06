@@ -58,6 +58,26 @@ class ChatViewModel: ObservableObject {
         generateChatResponse()
     }
 
+    func moveMessage(fromOffsets: IndexSet, toOffset: Int) {
+        if fromOffsets.count != 1 || fromOffsets.first! == toOffset  {
+            return
+        }
+        if fromOffsets.first! < toOffset {
+            for i in fromOffsets.first! + 1 ... toOffset - 1 {
+                messageViewModels[i].message.idx -= 1
+                globalStorage.updateChatMessage(byChatDetails: chatDetails, message: messageViewModels[i].message)
+            }
+        } else {
+            for i in toOffset ... fromOffsets.first! - 1 {
+                messageViewModels[i].message.idx += 1
+                globalStorage.updateChatMessage(byChatDetails: chatDetails, message: messageViewModels[i].message)
+            }
+        }
+        messageViewModels[fromOffsets.first!].message.idx = toOffset
+        globalStorage.updateChatMessage(byChatDetails: chatDetails, message: messageViewModels[fromOffsets.first!].message)
+        messageViewModels.move(fromOffsets: fromOffsets, toOffset: toOffset)
+    }
+
     private func generateChatResponse() {
         do {
             requestInProgress = true

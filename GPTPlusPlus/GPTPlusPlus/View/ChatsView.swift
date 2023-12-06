@@ -61,13 +61,13 @@ struct ChatsView: View {
         }
         )
         .sheet(isPresented: $addNewChatPresented) {
-            VStack {
-                HStack {
-                    Button("Cancel") {
+            NavigationView {
+                ChatPopupView(title: "Create chat", chatDetails: newChat)
+                    .navigationBarItems(
+                    leading: Button("Cancel") {
                         self.addNewChatPresented = false
-                    }
-                    Spacer()
-                    Button("Add") {
+                    },
+                    trailing: Button("Add") {
                         let copy = newChat.copy() as! ChatDetails
                         chatsViewModel.addNewChat(chatDetails: copy)
                         self.addNewChatPresented = false
@@ -77,29 +77,23 @@ struct ChatsView: View {
                             self.lastAdded = true
                         }
                     }
-                }
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
-                ChatPopupView(title: "Create chat", chatDetails: newChat)
+                )
             }
-            .padding(EdgeInsets(top: 32, leading: 32, bottom: 32, trailing: 32))
         }
         .sheet(isPresented: $modifyChatPresented) {
-            VStack {
-                HStack {
-                    Button("Cancel") {
+            NavigationView {
+                ChatPopupView(title: "Edit chat", chatDetails: modifyChat)
+                .navigationBarItems(
+                    leading: Button("Cancel") {
                         self.modifyChatPresented = false
-                    }
-                    Spacer()
-                    Button("Save") {
+                    },
+                    trailing: Button("Save") {
                         chatsViewModel.chats[editingIndex].copy(from: modifyChat)
                         chatsViewModel.updateChatDetails(with: chatsViewModel.chats[editingIndex])
                         self.modifyChatPresented = false
                     }
-                }
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
-                ChatPopupView(title: "Edit chat", chatDetails: modifyChat, showExport: true)
+                )
             }
-            .padding(EdgeInsets(top: 32, leading: 32, bottom: 32, trailing: 32))
         }
         .background(
             List {

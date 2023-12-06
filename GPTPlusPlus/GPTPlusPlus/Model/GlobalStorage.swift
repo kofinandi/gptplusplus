@@ -152,6 +152,7 @@ class GlobalStorage {
         persisted.sender = NSDecimalNumber(value: message.sender.rawValue)
         persisted.text = message.text
         persisted.chatDetailsID = byChatDetails.id
+        persisted.idx = NSDecimalNumber(value: message.idx)
         
         do {
             try viewContext.save()

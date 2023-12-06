@@ -18,6 +18,8 @@ struct ChatView: View {
     @State private var selectedSender: Message.Sender = .user
 
     @State private var promptContextMenuVisible = false
+
+    @State var isEditMode: EditMode = .inactive
     
     init(chatDetails: ChatDetails) {
         self._chatViewModel = StateObject(wrappedValue: ChatViewModel(chatDetails: chatDetails))
@@ -43,26 +45,24 @@ struct ChatView: View {
             chatViewModel.reloadData()
         }
         .sheet(isPresented: $modifyChatPresented) {
-            VStack {
-                HStack {
-                    Button("Cancel") {
+            NavigationView {
+                ChatPopupView(title: "Edit chat", chatDetails: modifyChat)
+                .navigationBarItems(
+                    leading: Button("Cancel") {
                         self.modifyChatPresented = false
-                    }
-                    Spacer()
-                    Button("Save") {
+                    },
+                    trailing: Button("Save") {
                         chatViewModel.chatDetails.copy(from: modifyChat)
                         chatViewModel.updateChatDetails(with: chatViewModel.chatDetails)
                         self.modifyChatPresented = false
                     }
-                }
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
-                ChatPopupView(title: "Edit chat", chatDetails: modifyChat, showExport: true)
+                )
             }
-            .padding(EdgeInsets(top: 32, leading: 32, bottom: 32, trailing: 32))
         }
         .navigationTitle(chatViewModel.chatDetails.title)
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(trailing: HStack {
+            EditButton()
             Button(action: {
                 withAnimation {
                     if chatViewModel.requestInProgress {
@@ -84,17 +84,21 @@ struct ChatView: View {
             }
         }
         )
+        .environment(\.editMode, self.$isEditMode)
     }
 
     @ViewBuilder func getChatList() -> some View {
         ScrollViewReader { scrollView in
-            ScrollView {
+            List {
                 ForEach(chatViewModel.messageViewModels) { message in
                     MessageView(viewModel: message).id(message.id)
                         .padding(.vertical, 5)
-                        .padding(.horizontal, 12)
-                }
+                }.onMove(perform: { indices, newOffset in
+                    chatViewModel.moveMessage(fromOffsets: indices, toOffset: newOffset)
+                })
             }
+            .padding(.horizontal, 8)
+            /*
             .onChange(of: chatViewModel.scrollToBottomAnimated) { _ in
                 withAnimation{
                     scrollView.scrollTo(chatViewModel.messageViewModels.last?.id, anchor: .bottom)
@@ -103,6 +107,7 @@ struct ChatView: View {
             .onChange(of: scrollToBottom) { _ in
                 scrollView.scrollTo(chatViewModel.messageViewModels.last?.id, anchor: .bottom)
             }
+             */
         }
     }
 

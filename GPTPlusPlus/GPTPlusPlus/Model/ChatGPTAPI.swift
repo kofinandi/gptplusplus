@@ -30,7 +30,7 @@ class ChatGPTAPI {
 
     func generateChatTitle(completion: @escaping (Result<String, Error>) -> Void) throws {
         var messages = globalStorage.getChatMessages(byChatDetails: chatDetails)
-        messages.insert(Message(sender: .system, text: chatDetails.titleGenPrompt?.text ?? ChatDetails.defaultTitleGenPrompt, chatDetailsID: chatDetails.id, idx: -1), at: 0)
+        messages.insert(Message(sender: .system, text: chatDetails.titleGenPrompt.text, chatDetailsID: chatDetails.id, idx: -1), at: 0)
         try generateResponse(messages: messages, completion: completion)
     }
 
@@ -65,6 +65,8 @@ class ChatGPTAPI {
             "model": chatDetails.api.rawValue,
             "messages": senderMessagePairs,
             "temperature": chatDetails.temperature,
+            "max_tokens": Int(chatDetails.maxTokens),
+            "top_p": chatDetails.topP,
         ]
 
         request.httpBody = try JSONSerialization.data(withJSONObject: requestBody)
