@@ -93,11 +93,13 @@ struct ChatView: View {
                 ForEach(chatViewModel.messageViewModels) { message in
                     MessageView(viewModel: message).id(message.id)
                         .padding(.vertical, 5)
+                        .listRowSeparator(.hidden)
                 }.onMove(perform: { indices, newOffset in
                     chatViewModel.moveMessage(fromOffsets: indices, toOffset: newOffset)
                 })
             }
-            .padding(.horizontal, 8)
+            // set clear background
+            .listStyle(PlainListStyle())
             /*
             .onChange(of: chatViewModel.scrollToBottomAnimated) { _ in
                 withAnimation{
