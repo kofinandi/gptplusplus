@@ -46,7 +46,7 @@ struct ChatView: View {
         }
         .sheet(isPresented: $modifyChatPresented) {
             NavigationView {
-                ChatPopupView(title: "Edit chat", chatDetails: modifyChat)
+                ChatPopupView(title: "Edit chat", chatDetails: modifyChat, showExport: true)
                 .navigationBarItems(
                     leading: Button("Cancel") {
                         self.modifyChatPresented = false
