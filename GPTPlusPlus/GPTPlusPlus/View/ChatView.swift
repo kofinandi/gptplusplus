@@ -106,10 +106,10 @@ struct ChatView: View {
                     scrollView.scrollTo(chatViewModel.messageViewModels.last?.id, anchor: .bottom)
                 }
             }
+             */
             .onChange(of: scrollToBottom) { _ in
                 scrollView.scrollTo(chatViewModel.messageViewModels.last?.id, anchor: .bottom)
             }
-             */
         }
     }
 
